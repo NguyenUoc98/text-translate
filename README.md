@@ -18,4 +18,11 @@ php artisan vendor:publish --provider="Uocnv\TextTranslate\TextTranslateServiceP
 
 "translate_target" => "vi" - là ngôn ngữ muốn dịch sang.
 
+## Cách sử dụng
+
+use Uocnv\TextTranslate\TextTranslate;
+
+$gt = new TextTranslate();
+
+echo $gt->translate($text, $to, $from='', $cache = false);
 
