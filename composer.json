@@ -1,0 +1,50 @@
+{
+    "name": "uocnv/text-translate",
+    "description": "translate text with google translate",
+    "keywords": [
+        "uocnv",
+        "text-translate"
+    ],
+    "homepage": "https://github.com/uocnv/text-translate",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "UocNV",
+            "email": "uocnv.soict.hust@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "laravel/framework": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Uocnv\\TextTranslate\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Uocnv\\TextTranslate\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Uocnv\\TextTranslate\\TextTranslateServiceProvider"
+            ],
+            "aliases": {
+                "TextTranslate": "Uocnv\\TextTranslate\\TextTranslateFacade"
+            }
+        }
+    }
+}
